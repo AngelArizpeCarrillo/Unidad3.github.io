@@ -1,0 +1,90 @@
+body {
+    background-color: #353642;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Contenedor principal del grid */
+.bento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Estilo de los elementos tipo "botón" */
+.grid {
+    background-color: #57667c;
+    padding: 1.5rem;
+    border-radius: .5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.grid:hover {
+    background-color: #EC8305;
+    transform: scale(1.05);
+    border-color: #ffffff;
+}
+
+/* Estilos de texto dentro del grid */
+.grid h3 {
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.grid p {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Estilo del icono en el grid */
+.icon {
+    width: 3em;
+    height: auto;
+}
+
+/* Ajustes de responsive */
+@media (max-width: 768px) {
+    .bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid:nth-child(1) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .bento {
+        grid-template-columns: 1fr;
+    }
+}
+
